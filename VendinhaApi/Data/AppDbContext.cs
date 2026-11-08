@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Vendinha.Api.Models;
+using VendinhaApi.Models;
 
-namespace Vendinha.Api.Data
+namespace VendinhaApi.Data
 {
     public class AppDbContext : DbContext
     {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Vendinha.Api.Models
+namespace VendinhaApi.Models
 {
     public class Client
     {

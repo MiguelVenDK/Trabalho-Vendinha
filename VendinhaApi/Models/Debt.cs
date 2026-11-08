@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Vendinha.Api.Models
+namespace VendinhaApi.Models
 {
     public class Debt
     {
