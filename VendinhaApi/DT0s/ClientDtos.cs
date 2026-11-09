@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Vendinha.Api.DTOs
+namespace VendinhaApi.DTOs
 {
     public class CreateClientDto
     {
