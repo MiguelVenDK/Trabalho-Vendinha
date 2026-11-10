@@ -42,7 +42,7 @@ namespace VendinhaApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<DebtResponseDto>> CreateDebt(int clientId, [FromBody] CreateDebtDto dto)
+        public async Task<ActionResult> CreateDebt(int clientId, [FromBody] CreateDebtDto dto)
         {
             var client = await _context.Clients
                 .Include(c => c.Debts)
@@ -66,22 +66,24 @@ namespace VendinhaApi.Controllers
             _context.Debts.Add(debt);
             await _context.SaveChangesAsync();
 
-            var response = new DebtResponseDto
+            return StatusCode(201, new
             {
-                Id = debt.Id,
-                Value = debt.Value,
-                IsPaid = debt.IsPaid,
-                CreatedAt = debt.CreatedAt,
-                PaidAt = debt.PaidAt,
-                ClientId = debt.ClientId
-            };
-
-            return CreatedAtAction(nameof(GetDebts), new { clientId = clientId }, response);
+                message = $"O cliente {client.Name} tem uma dívida de R$ {debt.Value:F2}.",
+                id = debt.Id,
+                value = debt.Value,
+                isPaid = debt.IsPaid,
+                createdAt = debt.CreatedAt,
+                clientId = debt.ClientId
+            });
         }
 
         [HttpPatch("{debtId}/pay")]
         public async Task<IActionResult> MarkDebtAsPaid(int clientId, int debtId)
         {
+            var client = await _context.Clients.FindAsync(clientId);
+            if (client == null)
+                return NotFound(new { message = "Cliente não encontrado." });
+
             var debt = await _context.Debts
                 .FirstOrDefaultAsync(d => d.Id == debtId && d.ClientId == clientId);
 
@@ -96,7 +98,10 @@ namespace VendinhaApi.Controllers
 
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new
+            {
+                message = $"O cliente {client.Name} quitou a dívida."
+            });
         }
     }
 }
