@@ -100,7 +100,13 @@ namespace VendinhaApi.Controllers
 
             return Ok(new
             {
-                message = $"O cliente {client.Name} quitou a dívida."
+                message = $"O cliente {client.Name} quitou a dívida.",
+                id = debt.Id,
+                value = debt.Value,
+                isPaid = debt.IsPaid,
+                createdAt = debt.CreatedAt,
+                paidAt = debt.PaidAt,
+                clientId = debt.ClientId
             });
         }
     }
