@@ -26,14 +26,37 @@ O projeto foi feito para cobrir cada detalhe do cenário 1
 
 ##  Como rodar o projeto
 
-### O que você precisa ter instalado:
-- O [.NET SDK](https://dotnet.microsoft.com/) (versão 8.0 ou superior)
+Este repositório contém o código-fonte de uma Web API desenvolvida em C# com .NET 8, estruturada em camadas, utilizando Entity Framework Core e banco de dados SQLite para gerenciamento de clientes e dívidas.
+
+## 📋 Pré-requisitos
+
+Para rodar o codigo é preciso uma máquina que possui apenas o VS Code instalado, você precisará instalar os seguintes itens:
+
+1. **Git**: Para clonar o repositório de código-fonte.
+2. **.NET 8 SDK**: O kit de desenvolvimento oficial do .NET (necessário para compilar e executar o código C#). Você pode baixar gratuitamente no site oficial da Microsoft: [Baixar .NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). ou .NET superior.
+
+## 🧩 Extensões Recomendadas para o VS Code
+
+Para visualizar e depurar o código com facilidade no VS Code, instale as seguintes extensões na aba de Extensões (`Ctrl+Shift+X`):
+- **C#** (fornecida pela Microsoft) - Suporte a sintaxe, *IntelliSense* e depuração.
+- **C# Dev Kit** (fornecida pela Microsoft) - Gerenciamento moderno de projetos C#.
+
+---
+
+## 🚀 Como Executar o Projeto
+
+Siga os passos abaixo no terminal da sua máquina:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-seu-repositorio>
+   cd <nome-da-pasta-do-projeto> / Provavelmente vai ser Trabalho-Vendinha.
 
 ### Passo a passo rápido:
 1. Clone este repositório ou baixe os arquivos para o seu computador.
 2. Abra o terminal na pasta do projeto (`VendinhaApi`):
    ```bash
-   cd VendinhaApi -> dotnet run -> vai gerar o link http -> clique no link e sera redirecionado para o navegador.
+   cd Trabalho-Vendinha -> cd VendinhaApi -> dotnet run -> vai gerar o link http -> copie link gerado e cole no navegador.
 
 # Observação:
 - quando for rodar o site e for colocar um CPF para teste, ele precisa de um CPF válido, recomendo entrar em algum site que gere CPFs para fazer o teste.
