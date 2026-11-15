@@ -49,8 +49,8 @@ Siga os passos abaixo no terminal da sua máquina:
 
 1. **Clone o repositório:**
    ```bash
-   git clone <url-do-seu-repositorio>
-   cd <nome-da-pasta-do-projeto> / Provavelmente vai ser Trabalho-Vendinha.
+   git clone <url-do-projeto>
+   cd <nome-da-pasta-do-projeto> / Trabalho-Vendinha.
 
 ### Passo a passo rápido:
 1. Clone este repositório ou baixe os arquivos para o seu computador.
