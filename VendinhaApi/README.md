@@ -44,16 +44,8 @@ Para visualizar e depurar o código com facilidade no VS Code, instale as seguin
 ---
 
 ## 🚀 Como Executar o Projeto
-
-Siga os passos abaixo no terminal da sua máquina:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone <url-do-projeto>
-   cd <nome-da-pasta-do-projeto> / Trabalho-Vendinha.
-
 ### Passo a passo rápido:
-1. Clone este repositório ou baixe os arquivos para o seu computador.
+1. Clone este repositório ou baixe os arquivos para o seu computador. usando git clone e depois code .
 2. Abra o terminal na pasta do projeto (`VendinhaApi`):
    ```bash
    cd Trabalho-Vendinha -> cd VendinhaApi -> dotnet run -> vai gerar o link http -> copie link gerado e cole no navegador.
