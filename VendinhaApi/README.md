@@ -50,5 +50,14 @@ Para visualizar e depurar o código com facilidade no VS Code, instale as seguin
    ```bash
    cd Trabalho-Vendinha -> cd VendinhaApi -> dotnet run -> vai gerar o link http -> copie link gerado e cole no navegador.
 
-# Observação:
+# Observações
 - quando for rodar o site e for colocar um CPF para teste, ele precisa de um CPF válido, recomendo entrar em algum site que gere CPFs para fazer o teste.
+
+-Para garantir o funcionamento correto das requisições ao testar a API pela interface do Swagger, observe os seguintes pontos:
+
+- **Formatação de Dados (`POST` e `PUT`):** Todos os campos de texto (Nome, CPF, E-mail e Data de Nascimento) devem ser enviados entre aspas duplas (`""`), seguindo o padrão JSON.
+- **Formato de Data (`birthDate`):** Utilize sempre o padrão `AAAA-MM-DD` (exemplo: `"2000-11-15"`).
+- **Atualização de Clientes (`PUT /api/clients/{id}`):** 
+  1. Informe o **ID do cliente** que deseja editar no campo de parâmetro superior.
+  2. No corpo da requisição (*Request body*), o Swagger exibirá os campos padrão (`name`, `cpf`, `birthDate` e `email`). 
+  3. Coloque os dados novos (preenchendo tanto os que você deseja alterar quanto mantendo os atuais) e execute.
