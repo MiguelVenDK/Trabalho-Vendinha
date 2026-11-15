@@ -15,7 +15,7 @@ namespace VendinhaApi.Models
         public string Cpf { get; set; } = string.Empty;
 
         [Required]
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [Required]
         [EmailAddress]
@@ -28,9 +28,9 @@ namespace VendinhaApi.Models
         {
             get
             {
-                var today = DateTime.Today;
+                var today = DateOnly.FromDateTime(DateTime.Today);
                 var age = today.Year - BirthDate.Year;
-                if (BirthDate.Date > today.AddYears(-age)) age--;
+                if (BirthDate > today.AddYears(-age)) age--;
                 return age;
             }
         }

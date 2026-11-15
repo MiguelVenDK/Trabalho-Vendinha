@@ -11,7 +11,7 @@ namespace VendinhaApi.DTOs
         public string Cpf { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [Required(ErrorMessage = "O e-mail é obrigatório.")]
         [EmailAddress(ErrorMessage = "E-mail inválido.")]
@@ -27,7 +27,7 @@ namespace VendinhaApi.DTOs
         public string Cpf { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
-        public DateTime BirthDate { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [Required(ErrorMessage = "O e-mail é obrigatório.")]
         [EmailAddress(ErrorMessage = "E-mail inválido.")]
